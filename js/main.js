@@ -46,7 +46,7 @@ function modeChange() {
 
 function fetchData(input = '', region = '') {
    countries.empty();
-   fetch('/data.json')
+   fetch('data.json')
    .then(data => data.json())
    .then(data => {
       data.forEach(country => {
