@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+  scroll-behavior: smooth; }
+
+:root,
+body {
+  font-family: "https://fonts.google.com/specimen/Nunito+Sans";
+  font-weight: 300;
+  color: #000;
+  background-color: #fcfcfc;
+  line-height: 1.5;
+  min-height: 100vh; }
+  :root header,
+  body header {
+    background-color: #ffffff;
+    box-shadow: 0 0px 10px #e6e6e6; }
+  :root .countries .country,
+  body .countries .country {
+    background-color: #ffffff;
+    box-shadow: 0 0px 10px #e6e6e6; }
+    :root .countries .country:hover,
+    body .countries .country:hover {
+      box-shadow: 0 0px 10px #cccccc;
+      transform: translateY(-2px); }
+    :root .countries .country .info *,
+    body .countries .country .info * {
+      color: #111517; }
+    :root .countries .country .info span,
+    body .countries .country .info span {
+      font-weight: 600;
+      color: #202c37; }
+  :root .search-container .search-input input,
+  body .search-container .search-input input {
+    background-color: #ffffff;
+    color: #111517;
+    box-shadow: 0 0px 10px #e6e6e6; }
+    :root .search-container .search-input input:focus, :root .search-container .search-input input:hover,
+    body .search-container .search-input input:focus,
+    body .search-container .search-input input:hover {
+      outline: none;
+      box-shadow: 0 0px 10px #cccccc; }
+    :root .search-container .search-input input::placeholder,
+    body .search-container .search-input input::placeholder {
+      color: #808080; }
+  :root .search-container .search-input svg,
+  body .search-container .search-input svg {
+    color: #808080; }
+  :root .search-container .search-select,
+  body .search-container .search-select {
+    background-color: #ffffff;
+    box-shadow: 0 0px 10px #e6e6e6; }
+    :root .search-container .search-select select,
+    body .search-container .search-select select {
+      background-color: #ffffff; }
+  :root.dark,
+  body.dark {
+    font-family: "https://fonts.google.com/specimen/Nunito+Sans";
+    font-weight: 300;
+    color: #ffffff;
+    background-color: #202c37;
+    line-height: 1.5; }
+    :root.dark header,
+    body.dark header {
+      background-color: #2b3945;
+      box-shadow: 0 0px 10px #171f26; }
+    :root.dark .search-container .search-input input,
+    body.dark .search-container .search-input input {
+      background-color: #2b3945;
+      color: #fcfcfc;
+      box-shadow: 0 0px 10px #171f27; }
+      :root.dark .search-container .search-input input:focus, :root.dark .search-container .search-input input:hover,
+      body.dark .search-container .search-input input:focus,
+      body.dark .search-container .search-input input:hover {
+        outline: none;
+        box-shadow: 0 0px 10px #0d1217; }
+      :root.dark .search-container .search-input input::placeholder,
+      body.dark .search-container .search-input input::placeholder {
+        color: #ffffff; }
+    :root.dark .search-container .search-input svg,
+    body.dark .search-container .search-input svg {
+      color: #ffffff; }
+    :root.dark .search-container .search-select,
+    body.dark .search-container .search-select {
+      background-color: #2b3945;
+      box-shadow: 0 0px 10px #171f26; }
+      :root.dark .search-container .search-select select,
+      body.dark .search-container .search-select select {
+        background-color: #2b3945;
+        color: #ffffff; }
+    :root.dark .countries .country,
+    body.dark .countries .country {
+      background-color: #2b3945;
+      box-shadow: 0 0px 10px #0d1217; }
+      :root.dark .countries .country:hover,
+      body.dark .countries .country:hover {
+        box-shadow: 0 0px 10px black;
+        transform: translateY(-2px); }
+      :root.dark .countries .country .info *,
+      body.dark .countries .country .info * {
+        color: #e3e3e3; }
+      :root.dark .countries .country .info span,
+      body.dark .countries .country .info span {
+        font-weight: 600;
+        color: #ffffff; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100; }
+  header .text {
+    font-size: 1.2rem;
+    font-weight: 800; }
+  header .mode {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none; }
+    header .mode svg {
+      width: 1.2rem;
+      height: 1.2rem; }
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem; }
+  .search-container .search-input {
+    width: fit-content;
+    position: relative; }
+    .search-container .search-input input {
+      width: 100%;
+      padding: 1rem 2rem 1rem 3rem;
+      border-radius: 0.5rem;
+      font-size: 14px;
+      border: none; }
+    .search-container .search-input svg {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%); }
+  .search-container .search-select {
+    padding: .2rem .2rem;
+    border-radius: 0.5rem; }
+    .search-container .search-select select {
+      padding: 1rem 3rem;
+      border: none;
+      outline: none; }
+      .search-container .search-select select:focus {
+        outline: none; }
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+  gap: 2rem;
+  padding: 2rem; }
+  @media (max-width: 768px) {
+    .countries {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } }
+  .countries .country {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease; }
+    .countries .country img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem; }
+    .countries .country .info {
+      padding: 1rem; }
+      .countries .country .info h3 {
+        font-weight: 800;
+        margin-bottom: .5rem; }
+      .countries .country .info p {
+        font-weight: 300;
+        color: #808080; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="detailed" lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="keywards" content="HTML, CSS, JavaScript, Rest country API, API, Coutries">
+    <meta name="discreption" content="This is a simple website that uses the Rest country API to display information about countries.">
+    <meta name="author" content="Omar Matar">
+    <link rel="preload" as="style" href="./fontawesome-free/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="./css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  </head>
+  <body>
+    <header>
+      <div class="text">Where in the world?</div>
+      <div class="mode"><i class="fa-regular fa-moon"></i> Dark Mode</div>
+    </header>
+    <div class="search-container">
+      <div class="search-input">
+        <input type="text" placeholder="Search for a country..." id="search"><i class="fas fa-search"></i>
+      </div>
+      <div class="search-select">
+        <select id="select" name="filter">
+          <option value="">All</option>
+          <option value="africa">Africa</option>
+          <option value="americas">Americas</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europe</option>
+          <option value="oceania">Oceania</option>
+        </select>
+      </div>
+    </div>
+    <div class="countries"></div>
+  </body>
+  <script src="./fontawesome-free/js/all.min.js" defer></script>
+  <script src="./js/jquery-3.7.1.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</html>

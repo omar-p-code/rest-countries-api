@@ -1,0 +1,22 @@
+block basic
+   - var page = 'index'
+doctype html
+html(lang="en", class=page)
+   head
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      meta(charset="UTF-8")
+      meta(name="robots", content="index, follow")
+      meta(name="googlebot", content="index, follow")
+      meta(name="keywards", content="HTML, CSS, JavaScript, Rest country API, API, Coutries")
+      meta(name="discreption", content="This is a simple website that uses the Rest country API to display information about countries.")
+      meta(name="author", content="Omar Matar")
+      link(rel="preload", as='style', href="./fontawesome-free/css/all.min.css", onload="this.onload=null;this.rel='stylesheet'")
+      link(rel="preload", as='style', href="./css/style.css", onload="this.onload=null;this.rel='stylesheet'")
+   body
+      include ./includes/header.pug
+      include ./includes/search.pug
+      .countries
+
+   script(src="./fontawesome-free/js/all.min.js", defer)
+   script(src="./js/jquery-3.7.1.min.js", defer)
+   script(src="./js/main.js", defer)
