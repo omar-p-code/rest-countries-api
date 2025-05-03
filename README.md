@@ -28,12 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot](./Screenshot-1.jpg)
-![screenshot](./Screenshot-2.jpg)
-![screenshot](./Screenshot-3.jpg)
-![screenshot](./Screenshot-4.jpg)
-![screenshot](./Screenshot-5.jpg)
-![screenshot](./Screenshot-6.jpg)
+![screenshot](./Screenshot-1.png)
+![screenshot](./Screenshot-2.png)
+![screenshot](./Screenshot-3.png)
+![screenshot](./Screenshot-4.png)
+![screenshot](./Screenshot-5.png)
+![screenshot](./Screenshot-6.png)
 
 ### Links
 
