@@ -12,8 +12,8 @@ const searchInput = $('.search-container input');
 const filter = $('.search-container select');
 
 // Check if dark mode is enabled in local storage and set the initial state
-if (localStorage.getItem('dark') == true) {
-   document.body.classList.add('dark');
+if (JSON.parse(localStorage.getItem('dark')) === true) {
+   $('body').addClass('dark')
 }
 
 mode.on('click', modeChange);
@@ -110,11 +110,11 @@ searchInput.on('keyup blur', function(e) {
 function modeChange() {
    $('body').toggleClass('dark');
    if ($('body').hasClass('dark')) {
-      localStorage.setItem('dark', 'true');
       mode.find('svg').removeClass('fa-regular').addClass('fa-solid');
+      localStorage.setItem('dark', true);
    }else {
-      localStorage.setItem('dark', 'false');
       mode.find('svg').removeClass('fa-solid').addClass('fa-regular');
+      localStorage.setItem('dark', false);
    }
 }
 
