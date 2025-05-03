@@ -12,7 +12,7 @@ const searchInput = $('.search-container input');
 const filter = $('.search-container select');
 
 // Check if dark mode is enabled in local storage and set the initial state
-if (localStorage.getItem('dark')) {
+if (localStorage.getItem('dark') == true) {
    document.body.classList.add('dark');
 }
 
