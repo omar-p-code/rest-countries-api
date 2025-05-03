@@ -11,6 +11,11 @@ const countries = $('.countries');
 const searchInput = $('.search-container input');
 const filter = $('.search-container select');
 
+// Check if dark mode is enabled in local storage and set the initial state
+if (localStorage.getItem('dark')) {
+   document.body.classList.add('dark');
+}
+
 mode.on('click', modeChange);
 
 if($('html').hasClass('details')) {
@@ -105,8 +110,10 @@ searchInput.on('keyup blur', function(e) {
 function modeChange() {
    $('body').toggleClass('dark');
    if ($('body').hasClass('dark')) {
+      localStorage.setItem('dark', 'true');
       mode.find('svg').removeClass('fa-regular').addClass('fa-solid');
    }else {
+      localStorage.setItem('dark', 'false');
       mode.find('svg').removeClass('fa-solid').addClass('fa-regular');
    }
 }
