@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="detailed" lang="en">
+<html class="details" lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -16,22 +16,30 @@
       <div class="text">Where in the world?</div>
       <div class="mode"><i class="fa-regular fa-moon"></i> Dark Mode</div>
     </header>
-    <div class="search-container">
-      <div class="search-input">
-        <input type="text" placeholder="Search for a country..." id="search"><i class="fas fa-search"></i>
-      </div>
-      <div class="search-select">
-        <select id="select" name="filter">
-          <option value="">All</option>
-          <option value="africa">Africa</option>
-          <option value="americas">Americas</option>
-          <option value="asia">Asia</option>
-          <option value="europe">Europe</option>
-          <option value="oceania">Oceania</option>
-        </select>
+    <div class="back">&larr; Back</div>
+    <div class="details">
+      <div class="image"><img loading="lazy"></div>
+      <div class="info">
+        <div class="name"></div>
+        <div class="country-info">
+          <div class="country-details">
+            <div class="native-name"></div>
+            <div class="population"></div>
+            <div class="region"></div>
+            <div class="sub-region"></div>
+            <div class="capital"></div>
+          </div>
+          <div class="country-meta">
+            <div class="top-level-domain"></div>
+            <div class="currencies"></div>
+            <div class="languages"></div>
+          </div>
+        </div>
+        <div class="country-borders"><span>Borders Countries:</span>
+          <div class="borders"></div>
+        </div>
       </div>
     </div>
-    <div class="countries"></div>
   </body>
   <script src="./fontawesome-free/js/all.min.js" defer></script>
   <script src="./js/jquery-3.7.1.min.js" defer></script>

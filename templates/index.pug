@@ -14,8 +14,9 @@ html(lang="en", class=page)
       link(rel="preload", as='style', href="./css/style.css", onload="this.onload=null;this.rel='stylesheet'")
    body
       include ./includes/header.pug
-      include ./includes/search.pug
-      .countries
+      block content
+         include ./includes/search.pug
+         .countries
 
    script(src="./fontawesome-free/js/all.min.js", defer)
    script(src="./js/jquery-3.7.1.min.js", defer)
